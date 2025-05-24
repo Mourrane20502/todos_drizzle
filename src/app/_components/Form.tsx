@@ -1,5 +1,6 @@
 import { addTodo } from "@/actions/actions";
 import React from "react";
+import FormButton from "./FormButton";
 
 export default function Form() {
   return (
@@ -21,12 +22,7 @@ export default function Form() {
         <span>Complete</span>
       </label>
 
-      <button
-        type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded-sm hover:bg-blue-600 transition"
-      >
-        Add Todo
-      </button>
+      <FormButton />
     </form>
   );
 }
