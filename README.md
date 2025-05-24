@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 13 + Drizzle ORM Todo App
+
+A simple Todo app built with Next.js 13 (App Router), Drizzle ORM, and server actions.  
+Supports creating, deleting, clearing todos, and marking completion status.
+
+---
+
+## Features
+
+- Create todos with title and completion status
+- List all todos with completion badges (Done / Pending)
+- Delete individual todos
+- Clear all todos at once
+- Server actions for fast, secure backend operations
+- Automatic cache revalidation for real-time UI updates
+- Fully typed with TypeScript
+- Tailwind CSS styling
+
+---
+
+## Technologies
+
+- Next.js 13 (App Router)
+- Drizzle ORM
+- Neon (PostgreSQL serverless database)
+- React Server & Client Components
+- Server Actions (`"use server"` / `"use client"`)
+- Tailwind CSS
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+
+- Neon PostgreSQL database (serverless)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Setup Neon Database
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Create a Neon account at [neon.tech](https://neon.tech) and create a new project.
+2. Get the connection string (connection URI) from Neon dashboard.
+3. In your project root, create a `.env` file and add:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```env
+   DATABASE_URL="your-neon-connection-string"
