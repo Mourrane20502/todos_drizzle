@@ -3,7 +3,10 @@ import React from "react";
 
 export default function Form() {
   return (
-    <form action={addTodo} className="max-w-md mx-auto flex flex-col gap-4 p-4">
+    <form
+      action={addTodo}
+      className="max-w-md border-black/25 border rounded-lg mx-auto flex flex-col gap-4 p-4"
+    >
       <h1 className="text-center text-2xl font-bold">Todos Page</h1>
 
       <input
