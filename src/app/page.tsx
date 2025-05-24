@@ -1,7 +1,7 @@
 import { db } from "@/drizzle/db";
+import ClearButton from "./_components/ClearButton";
 import DeleteButton from "./_components/DeleteButton";
 import Form from "./_components/Form";
-import ClearButton from "./ClearButton";
 
 export default async function Home() {
   const todos = await db.query.todos.findMany();
